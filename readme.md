@@ -1,5 +1,11 @@
 # Temporizador Pomodoro Interactivo
 
+![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+![Tests](https://img.shields.io/badge/Tests-Pytest-blueviolet?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
+![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-blue?style=flat-square)
+
 Este proyecto consiste en desarrollar un temporizador Pomodoro interactivo que permita a los usuarios gestionar su tiempo de trabajo y descanso usando la técnica Pomodoro (25 minutos de trabajo / 5 minutos de descanso). El desarrollo se realizará paso a paso utilizando Git para control de versiones y contando con la asistencia de herramientas de IA para generar código, el cual deberá ser analizado, comprendido y modificado según las necesidades del proyecto.
 
 ## Objetivos de Aprendizaje
