@@ -1,0 +1,4 @@
+- falta el break del descanso largo...al final del ciclo el tiempo desdcanso final
+- añadir al json el log de cada usuario con sus tiempos de trabajo y descanso y pausas
+- añadir cuanto tiempo se ha pausado y q al reanudar q lo muestre
+- en un horario de 9 a 2 cuándo es mi descanso corto y cuando es mi descsanso largo? y todo eso añadir en el json.

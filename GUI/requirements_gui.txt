@@ -1,0 +1,13 @@
+# 🍅 Dependencias para la GUI de Pomodoro
+
+# Tkinter viene instalado por defecto con Python,
+# pero en algunos sistemas de Linux puede requerir instalación manual.
+
+# Instalación manual en Linux:
+# Ubuntu/Debian: sudo apt-get install python3-tk
+# Fedora: sudo dnf install python3-tkinter
+# Arch: sudo pacman -S tk
+
+# Dependencias de desarrollo
+pytest>=7.0
+pytest-cov>=3.0

@@ -1,0 +1,35 @@
+{
+  "session_start": "2026-03-27T12:38:41.674436",
+  "session_end": "2026-03-27T12:39:04.756278",
+  "total_cycles_completed": 2,
+  "work_pauses": 0,
+  "break_pauses": 0,
+  "total_work_pause_time": 0,
+  "total_break_pause_time": 0,
+  "cycles": [
+    {
+      "cycle_number": 1,
+      "work_start": "2026-03-27T12:38:41.675271",
+      "work_end": "2026-03-27T12:38:48.696915",
+      "break_start": "2026-03-27T12:38:48.696931",
+      "break_end": "2026-03-27T12:38:52.714619",
+      "break_type": "CORTO"
+    },
+    {
+      "cycle_number": 2,
+      "work_start": "2026-03-27T12:38:52.714669",
+      "work_end": "2026-03-27T12:38:59.726706",
+      "break_start": null,
+      "break_end": null,
+      "break_type": null
+    },
+    {
+      "cycle_number": "FINAL",
+      "work_start": null,
+      "work_end": null,
+      "break_start": "2026-03-27T12:38:59.727281",
+      "break_end": "2026-03-27T12:39:04.756178",
+      "break_type": "LARGO FINAL"
+    }
+  ]
+}
