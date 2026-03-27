@@ -69,13 +69,14 @@ El **Temporizador Pomodoro Interactivo** es una aplicación de terminal que impl
 
 ```
 pomodoro/
+├── main.py                              # ⭐ PUNTO DE ENTRADA (RECOMENDADO)
 ├── LICENSE                              # Licencia MIT
 ├── README.md                            # Presentación del proyecto
 ├── pyrightconfig.json                   # Configuración de análisis estático
 ├── requirements.txt                     # Dependencias (pytest)
 │
 ├── src/                                 # 📦 CÓDIGO FUENTE
-│   ├── pomodoro.py                      # ⭐ Punto de entrada (20 líneas)
+│   ├── pomodoro.py                      # Punto de entrada (desde src)
 │   │
 │   ├── config/                          # ⚙️ CONFIGURACIÓN
 │   │   ├── __init__.py
@@ -126,11 +127,17 @@ pomodoro/
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                     pomodoro.py (ENTRY)                      │
-│                        (20 líneas)                           │
-└────────────────────┬────────────────────────────────────────┘
-                     │ imports
-                     ▼
+│              main.py (RECOMENDADO)                           │
+│  Punto de entrada desde la raíz del proyecto                │
+└────────────────┬────────────────────────────────────────────┘
+                 │ imports src.modules.menu
+                 ▼
+┌─────────────────────────────────────────────────────────────┐
+│           src/pomodoro.py (alternativa)                      │
+│  Punto de entrada desde el directorio src                   │
+└────────────────┬────────────────────────────────────────────┘
+                 │ imports
+                 ▼
          ┌───────────────────────┐
          │   main_menu() [menu]  │ (40 líneas)
          └───────────┬───────────┘
@@ -156,9 +163,9 @@ pomodoro/
 
 ## 3. Módulos Principales
 
-### 📝 Módulo: `src/pomodoro.py` (Bootstrap)
+### 📝 Módulo: `main.py` (Punto de Entrada Principal - RECOMENDADO)
 
-**Responsabilidad:** Punto de entrada de la aplicación
+**Responsabilidad:** Punto de entrada desde la raíz del proyecto
 
 **Contenido:**
 ```python
@@ -171,8 +178,30 @@ pomodoro/
 - 20 líneas de código limpio
 - Captura Ctrl+C para evitar crash
 - Independiente del directorio de ejecución
+- Shebang compatible con Unix/Linux/macOS
+- **Uso recomendado:** `python main.py`
 
-**Propósito:** Decoupling entre punto de entrada y lógica de menú
+**Propósito:** Punto de entrada conveniente desde la raíz del proyecto
+
+---
+
+### 📝 Módulo: `src/pomodoro.py` (Punto de Entrada Alternativo)
+
+**Responsabilidad:** Punto de entrada alternativo desde el directorio src
+
+**Contenido:**
+```python
+# Similar a main.py, configura PATH e invoca main_menu()
+# También maneja KeyboardInterrupt
+```
+
+**Características:**
+- 20 líneas de código limpio
+- Captura Ctrl+C para evitar crash
+- Requiere ejecutar desde directorio específico
+- **Uso alternativo:** `python src/pomodoro.py`
+
+**Propósito:** Decoupling entre punto de entrada y lógica de menú (backup alternativo)
 
 ---
 
@@ -526,7 +555,8 @@ show_notification("¡A trabajar!", "info")
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│  Usuario ejecuta: python src/pomodoro.py               │
+│ Usuario ejecuta: python main.py (RECOMENDADO)          │
+│       o: python src/pomodoro.py                         │
 └────────────────┬────────────────────────────────────────┘
                  ▼
 ┌─────────────────────────────────────────────────────────┐
@@ -942,7 +972,10 @@ def configure():
 # 1. Instalar dependencias
 pip install -r requirements.txt
 
-# 2. Ejecutar
+# 2. Ejecutar (opción recomendada - desde la raíz)
+python main.py
+
+# Alternativamente, desde el directorio src:
 python src/pomodoro.py
 ```
 

@@ -55,6 +55,7 @@ Este proyecto consiste en desarrollar un temporizador Pomodoro interactivo que p
 
 ```
 pomodoro/
+├── main.py                                # ⭐ Punto de entrada (RECOMENDADO)
 ├── README.md                              # Este archivo
 ├── LICENSE                                # Licencia MIT
 ├── pyrightconfig.json                     # Configuración de Pyright
@@ -107,6 +108,10 @@ pomodoro/
 
 3. **Verifica la instalación**
    ```bash
+   # Opción 1: Desde la raíz (RECOMENDADO)
+   python main.py
+   
+   # Opción 2: Desde src
    python src/pomodoro.py
    ```
 
@@ -133,7 +138,14 @@ pip install -r requirements.txt
 Ejecuta el script principal para iniciar el temporizador:
 
 ```bash
+# Opción 1: Desde la raíz del proyecto (RECOMENDADO)
+python main.py
+
+# Opción 2: Desde el directorio src
 python src/pomodoro.py
+
+# Opción 3: En sistemas Unix/Linux/macOS con shebang
+./main.py
 ```
 
 ### Menú Interactivo
